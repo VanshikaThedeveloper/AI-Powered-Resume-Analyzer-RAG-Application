@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f0f5fc;       /* Soft, elegant light gray-blue */
+  --foreground: #0f172a;       /* Dark slate text */
+  --card: #f8fafc;             /* Subtle gray-blue white for cards */
+  --card-foreground: #1e293b;
+  --border: #cbd5e1;
+  --primary: #2563eb;          /* Steel blue */
+  --primary-foreground: #ffffff;
+  --muted: #64748b;
+  --muted-foreground: #475569;
+  --accent: #3b82f6;
+  --ring: #93c5fd;
+}
+
+.dark {
+  --background: #020e0a;       /* Deep forest green background */
+  --foreground: #f2fbf7;       /* Soft emerald white text */
+  --card: #051c14;             /* Premium dark emerald/forest card bg */
+  --card-foreground: #e6f4ee;
+  --border: #0a3325;
+  --primary: #10b981;          /* Emerald accent */
+  --primary-foreground: #ffffff;
+  --muted: #10b981;
+  --muted-foreground: #a7f3d0;
+  --accent: #059669;
+  --ring: #059669;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-geist-sans), "Inter", sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+/* Custom styles and smooth animations */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+/* Glowing background utilities */
+.glow-accent {
+  box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.15);
+}
+
+.dark .glow-accent {
+  box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.25);
+}
+
+/* Grid overlay background patterns */
+.grid-bg {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark .grid-bg {
+  background-image: radial-gradient(rgba(16, 185, 129, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Elegant loader */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}

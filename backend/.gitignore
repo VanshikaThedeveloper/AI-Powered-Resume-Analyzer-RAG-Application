@@ -1,0 +1,120 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ==========================
+# Virtual Environment
+# ==========================
+venv/
+env/
+ENV/
+.venv/
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================
+# Jupyter Notebook
+# ==========================
+.ipynb_checkpoints/
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+
+# ==========================
+# Testing
+# ==========================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+
+# ==========================
+# Type Checkers
+# ==========================
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+
+# ==========================
+# ChromaDB / Vector Database
+# ==========================
+chroma/
+chromadb/
+vector_db/
+db/
+persist/
+storage/
+
+# ==========================
+# Uploaded Files
+# ==========================
+uploads/
+temp/
+tmp/
+
+# ==========================
+# Cache
+# ==========================
+.cache/
+*.cache
+
+# ==========================
+# SQLite
+# ==========================
+*.sqlite3
+*.db
+
+# ==========================
+# Build Artifacts
+# ==========================
+*.tar.gz
+*.zip
+
+# ==========================
+# Python Version
+# ==========================
+.python-version
