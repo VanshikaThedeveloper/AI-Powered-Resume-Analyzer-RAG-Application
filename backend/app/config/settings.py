@@ -36,8 +36,9 @@ class Settings(BaseSettings):
     # ==========================
     # FastAPI
     # ==========================
-    HOST: str
-    PORT: int
+
+    HOST: str = "0.0.0.0"
+    PORT: int = 8000
 
     # ==========================
     # Application
